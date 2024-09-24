@@ -4,4 +4,5 @@ description: "An online platform for education."
 baseurl: "/theme"
 url: "https://scholarn.github.io/theme"
 theme: minima
-  skins: dark
+author:
+  Md Azaharuddin
