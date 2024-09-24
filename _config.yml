@@ -5,4 +5,7 @@ baseurl: "/theme"
 url: "https://scholarn.github.io/theme"
 theme: minima
 author:
-  Md Azaharuddin
+  name: Md Azaharuddin
+
+minima:
+  skin: dark
