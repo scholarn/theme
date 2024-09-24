@@ -1,6 +1,6 @@
 # Basic site settings
 title: "Scholarn Theme"
 description: "An online platform for education."
-baseurl: ""
+baseurl: "/theme"
 url: "https://scholarn.github.io/theme"
 theme: minima
