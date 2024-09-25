@@ -6,6 +6,7 @@ url: "https://scholarn.github.io/theme"
 theme: minima
 author:
   name: Md Azaharuddin
-
-minima:
-  skin: dark
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
