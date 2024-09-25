@@ -1,8 +1,8 @@
 # Basic site settings
 title: "Scholarn Theme"
 description: "An online platform for education."
-baseurl: ""
-url: "https://scholarn.github.io/theme"
+baseurl: "/theme"
+url: "https://scholarn.github.io"
 theme: minima
 author:
   name: Md Azaharuddin
