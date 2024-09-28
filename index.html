@@ -4,10 +4,20 @@ layout: default
  <div class="wrapper">
    <div class="page-content">
  <section>
-<h1>Welcome to Scholarn Theme</h1>
+<h1>Welcome to {{ site.title }}.</h1>
 </section>
 <section>
   <h1>Announcement</h1>
+</section>
+<section>
+ <h1>Word of the day.</h>
+
+{% assign day = site.time | date: "%j" | plus: 0 %}
+{% assign word_index = day | modulo: site.data.words.size %}
+{% assign word_of_the_day = site.data.words[word_index] %}
+
+<p><strong>{{ word_of_the_day.word }}</strong></p>
+<p>{{ word_of_the_day.meaning }}</p>
 </section>
 <section>
   <h1>Popular Topics</h1>
