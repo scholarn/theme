@@ -6,6 +6,12 @@ url: "https://scholarn.github.io"
 theme: minima
 author: Md Azaharuddin
 permalink: pretty
+defaults:
+  - 
+    scope:
+      path: ""
+    values:
+      layout: default
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
