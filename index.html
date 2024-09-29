@@ -27,6 +27,20 @@ layout: default
 <p>{{ word_of_the_day.meaning }}</p>
 </blockquote>
 </section>
+    <section>
+<h1>Courses</h1>
+
+<ul>
+  {% for course in site.courses %}
+    <li>
+      <a href="{{ course.url }}">{{ course.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+    </section>
+    <section>
+     
+    </section>
 <section>
   <h1>Popular Topics</h1>
 </section>
