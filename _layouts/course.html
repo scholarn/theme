@@ -12,7 +12,7 @@
     <ul>
         {% assign lessons = site.lessons | where: "course", page.title %}
         {% for lesson in lessons %}
-        <li><a href="{{ lesson.url }}">{{ lesson.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ lesson.url }}">{{ lesson.title }}</a></li>
         {% endfor %}
     </ul>
 </body>
