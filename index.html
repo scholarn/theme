@@ -33,7 +33,7 @@ layout: default
 <ul>
   {% for course in site.courses %}
     <li>
-      <a href="{{ course.url }}">{{ course.title }}</a>
+      <a href="{{ site.baseurl }}{{ course.url }}">{{ course.title }}</a>
     </li>
   {% endfor %}
 </ul>
