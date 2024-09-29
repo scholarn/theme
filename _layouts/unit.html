@@ -6,17 +6,5 @@
 <body>
     <h1>{{ page.title }}</h1>
     <div>{{ content }}</div>
-
-    <div class="navigation">
-        {% assign previous = site.units | where: "lesson", page.lesson | previous %}
-        {% assign next = site.units | where: "lesson", page.lesson | next %}
-        
-        {% if previous %}
-            <a href="{{ site.baseurl }}{{ previous.url }}">Previous: {{ previous.title }}</a>
-        {% endif %}
-        {% if next %}
-            <a href="{{ site.baseurl }}{{ next.url }}">Next: {{ next.title }}</a>
-        {% endif %}
-    </div>
 </body>
 </html>
