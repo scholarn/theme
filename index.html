@@ -23,8 +23,9 @@ layout: default
 {%- assign day = site.time | date: "%j" | plus: 0 -%}
 {%- assign word_index = day | modulo: site.data.words.size -%}
 {%- assign word_of_the_day = site.data.words[word_index] -%}
-<p><strong>{{ word_of_the_day.word }}</strong></p>
+<blockquote><p><strong>{{ word_of_the_day.word }}</strong></p>
 <p>{{ word_of_the_day.meaning }}</p>
+</blockquote>
 </section>
 <section>
   <h1>Popular Topics</h1>
