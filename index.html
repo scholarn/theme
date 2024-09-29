@@ -11,6 +11,8 @@ layout: default
 </section>
 <section>
  <h1><strong>Word of the day.</strong></h>
+ <p>Today's Date: {{ "now" | date: "%B %d, %Y" }}</p> 
+<p>Day Name: {{ "now" | date: "%A" }}</p>
 {%- assign day = site.time | date: "%j" | plus: 0 -%}
 {%- assign word_index = day | modulo: site.data.words.size -%}
 {%- assign word_of_the_day = site.data.words[word_index] -%}
