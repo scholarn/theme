@@ -1,0 +1,8 @@
+{% assign day_of_year = "now" | date: "%j" %}
+{% assign quote_index = day_of_year | modulo: site.data.quotes.size %}
+{% assign quote_of_the_day = site.data.quotes[quote_index] %}
+
+<blockquote>
+  <p>"{{ quote_of_the_day.text }}"</p>
+  <footer>— {{ quote_of_the_day.author }}</footer>
+</blockquote>
