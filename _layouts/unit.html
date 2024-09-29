@@ -12,10 +12,10 @@
         {% assign next = site.units | where: "lesson", page.lesson | next %}
         
         {% if previous %}
-            <a href="{{ previous.url }}">Previous: {{ previous.title }}</a>
+            <a href="{{ site.baseurl }}{{ previous.url }}">Previous: {{ previous.title }}</a>
         {% endif %}
         {% if next %}
-            <a href="{{ next.url }}">Next: {{ next.title }}</a>
+            <a href="{{ site.baseurl }}{{ next.url }}">Next: {{ next.title }}</a>
         {% endif %}
     </div>
 </body>
