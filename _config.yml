@@ -6,6 +6,7 @@ url: "https://scholarn.github.io"
 theme: minima
 author: Md Azaharuddin
 permalink: pretty
+timezone: "Asia/Kolkata"  # For example, "Asia/Kolkata"
 defaults:
   - 
     scope:
