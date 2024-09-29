@@ -13,6 +13,13 @@ defaults:
       path: ""
     values:
       layout: default
+collections:
+  courses:
+    output: true
+  lessons:
+    output: true
+  units:
+    output: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
