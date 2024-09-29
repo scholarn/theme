@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    {{ content }}
+
+    <h2>Units</h2>
+    <ul>
+        {% assign units = site.units | where: "lesson", page.title %}
+        {% for unit in units %}
+        <li><a href="{{ unit.url }}">{{ unit.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
