@@ -16,10 +16,13 @@ defaults:
 collections:
   courses:
     output: true
+    permalink: /courses/:title/
   lessons:
     output: true
+    permalink: /lessons/:title/
   units:
     output: true
+    permalink: /units/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
