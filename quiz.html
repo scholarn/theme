@@ -6,11 +6,16 @@ title: Mock Test
 <h1>Mock Test</h1>
 
 <form id="quiz-form">
-  {% for q in site.data.quiz.quiz %}
-    <h3>{{ q.question }}</h3>
-    {% for option in q.options %}
-      <input type="radio" name="question_{{ forloop.index }}" value="{{ option }}"> {{ option }}<br>
-    {% endfor %}
+  {% for quiz in site.quizzes %}
+    <fieldset>
+      <legend>{{ quiz.question }}</legend>
+      {% for option in quiz.options %}
+        <label>
+          <input type="radio" name="question_{{ forloop.index }}" value="{{ option }}">
+          {{ option }}
+        </label><br>
+      {% endfor %}
+    </fieldset>
     <br>
   {% endfor %}
   <input type="submit" value="Submit">
@@ -19,18 +24,20 @@ title: Mock Test
 <div id="result"></div>
 
 <script>
-  document.getElementById("quiz-form").onsubmit = function(e) {
-    e.preventDefault();
-    let score = 0;
-    let correctAnswers = {{ site.data.quiz.quiz | jsonify }};
-    
-    correctAnswers.forEach((question, index) => {
-      let selectedOption = document.querySelector(`input[name="question_${index + 1}"]:checked`);
-      if (selectedOption && selectedOption.value === question.correct) {
-        score++;
-      }
-    });
+document.getElementById("quiz-form").onsubmit = function(e) {
+  e.preventDefault();
+  
+  // Retrieve the correct answers from the Jekyll collection
+  let correctAnswers = {{ site.quizzes | jsonify }};
+  let score = 0;
+  
+  correctAnswers.forEach((quiz, index) => {
+    let selectedOption = document.querySelector(`input[name="question_${index + 1}"]:checked`);
+    if (selectedOption && selectedOption.value === quiz.correct) {
+      score++;
+    }
+  });
 
-    document.getElementById("result").innerHTML = `Your score: ${score}/${correctAnswers.length}`;
-  };
+  document.getElementById("result").innerHTML = `Your score: ${score}/${correctAnswers.length}`;
+};
 </script>
