@@ -1,3 +1,3 @@
 ---
 ---
-Welcome to Scholarn Theme.
+This is index of scholarn.
